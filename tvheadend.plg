@@ -1,0 +1,116 @@
+<?xml version='1.0' standalone='yes'?>
+
+<!DOCTYPE PLUGIN [
+<!ENTITY name       "tvheadend">
+<!ENTITY author     "Mettbrot">
+<!ENTITY version    "2015.06.05">
+<!ENTITY revision   "2075adb">
+<!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
+<!ENTITY path       "/boot/config/plugins/&name;">
+<!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
+]>
+
+<PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;">
+
+<CHANGES>
+##&name;
+
+###&version;
+- updated tvheadend to the latest version in stable branch (4.0.4)
+
+###2015.06.04;
+- first version with dynamix plugin support
+
+###2015.03.01
+- 2012-06-04-ww		- first release
+- 2012-06-11-ww		- tons of improvements + cool web layout
+- 2012-06-12-ww		- added START/STOP button + some improvements in start/stop functions
+- 2012-06-19-ww		- added XMLTV feature + HDHomeRun tuners support + new version of Tvheadend
+- 2013-08-16-Mettbrot	- removed XMLTV and BZ-file download for simplicity
+- 2013-12-24-Mettbrot	- Happy Holidays! upgraded tvheadend to a newer version - please back up your configuration!
+- 2014-07-09-Mettbrot	- Updated for Zlib support
+- 2014-07-09-Mettbrot	- First unRaid6.0 Edition. Installs 64bit binary nothing else.
+- 2014-12-03-Mettbrot - Adapted to new plugin system (dynamix)
+- 2015-03-01-Mettbrot - Added a dependency
+
+</CHANGES>
+
+<!--
+The 'pre-install' script.
+-->
+<FILE Run="/bin/bash">
+<INLINE>
+# Stop service
+/etc/rc.d/rc.tvheadend stop 2>/dev/null
+
+# Remove old 'source' files
+rm -f $(ls &path;/&name;*.txz 2>/dev/null|grep -v '&version;')
+# Remove old 'package' files
+rm -f $(ls &path;/pkg-&name;*.tgz 2>/dev/null|grep -v '&revision;')
+# Remove old dependencies ???
+</INLINE>
+</FILE>
+
+<!--
+The 'source' file.
+-->
+<FILE Name="&path;/&name;-&version;.txz" Run="upgradepkg --install-new">
+<URL>&repository;&name;-&version;.txz</URL>
+</FILE>
+
+<!--
+dependency files
+-->
+<FILE Name="&path;/dependencies/zlib-1.2.8-x86_64-1.txz" Run="upgradepkg --install-new">
+<URL>http://slackware.cs.utah.edu/pub/slackware/slackware64-14.1/slackware64/l/zlib-1.2.8-x86_64-1.txz</URL>
+</FILE>
+<FILE Name="&path;/dependencies/uriparser-0.7.5-x86_64-1PTr.txz" Run="upgradepkg --install-new">
+<URL>https://dl.dropboxusercontent.com/u/17326625/uriparser-0.7.5-x86_64-1PTr.txz</URL>
+</FILE>
+<FILE Name="&path;/dependencies/libiconv-1.13.1-x86_64-2_PTr.txz" Run="upgradepkg --install-new">
+<URL>https://dl.dropboxusercontent.com/u/17326625/libiconv-1.13.1-x86_64-2_PTr.txz</URL>
+</FILE>
+
+<!--
+tvheadend package
+-->
+<FILE Name="&path;/pkg-&name;-&revision;.tgz" Run="upgradepkg --install-new">
+<URL>&repository;pkg-&name;-&revision;.tgz</URL>
+</FILE>
+
+
+<!--
+The 'post-install' script.
+-->
+<FILE Run="/bin/bash">
+<INLINE>
+[ ! -f &path;/&name;.cfg ] &amp;&amp; cp /usr/local/emhttp/plugins/&name;/&name;.cfg &path;/
+echo ""
+echo "-----------------------------------------------------------"
+echo " Plugin &name; is installed."
+echo " Version: &version;"
+echo " TvHeadend Version: &revision;"
+echo "-----------------------------------------------------------"
+echo ""
+</INLINE>
+</FILE>
+
+<!--
+The 'remove' script.
+-->
+<FILE Run="/bin/bash" Method="remove">
+<INLINE>
+# Stop service
+/etc/rc.d/rc.tvheadend stop
+
+# Remove plugin related files
+rm -rf /boot/config/plugins/&name;
+
+# Uninstall the 'source' package
+removepkg &name;-&version;
+# Uninstall the 'tvheadend' package
+removepkg pkg-&name;-&revision;;
+</INLINE>
+</FILE>
+
+</PLUGIN>
