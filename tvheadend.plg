@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2015.06.05">
-<!ENTITY revision   "2075adb">
+<!ENTITY version    "2015.06.09">
+<!ENTITY revision   "3d2a26a">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
 <!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
@@ -17,6 +17,9 @@
 
 ###&version;
 - updated tvheadend to the latest version in stable branch (4.0.4)
+
+###2015.06.05;
+- fixup dependencies
 
 ###2015.06.04;
 - first version with dynamix plugin support
@@ -70,6 +73,11 @@ dependency files
 <FILE Name="&path;/dependencies/libiconv-1.13.1-x86_64-2_PTr.txz" Run="upgradepkg --install-new">
 <URL>https://dl.dropboxusercontent.com/u/17326625/libiconv-1.13.1-x86_64-2_PTr.txz</URL>
 </FILE>
+<FILE Name="&path;/dependencies/libdvbcsa1-1.1.0.tgz" Run="upgradepkg --install-new">
+<URL>https://dl.dropboxusercontent.com/u/17326625/libdvbcsa1-1.1.0.tgz</URL>
+</FILE>
+
+
 
 <!--
 tvheadend package
