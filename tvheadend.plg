@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2015.06.25">
+<!ENTITY version    "2015.08.24">
 <!ENTITY revision   "ffc3ff1">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
@@ -16,6 +16,9 @@
 ##&name;
 
 ###&version;
+- Adapt to new security policy in unRAID v6.1 (please reboot after upgrade)
+
+###2015.06.25;
 - updated tvheadend to the latest version in stable branch (4.0.5)
 
 ###2015.06.09;
@@ -47,7 +50,7 @@ The 'pre-install' script.
 <FILE Run="/bin/bash">
 <INLINE>
 # Stop service
-/etc/rc.d/rc.tvheadend stop 2>/dev/null
+/usr/local/emhttp/plugins/&name;/scripts/rc.tvheadend stop 2>/dev/null
 
 # Remove old 'source' files
 rm -f $(ls &path;/&name;*.txz 2>/dev/null|grep -v '&version;')
@@ -112,7 +115,7 @@ The 'remove' script.
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 # Stop service
-/etc/rc.d/rc.tvheadend stop
+/usr/local/emhttp/plugins/&name;/scripts/rc.tvheadend stop
 
 # Remove plugin related files
 rm -rf /boot/config/plugins/&name;
