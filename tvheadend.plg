@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2015.08.24">
-<!ENTITY revision   "ffc3ff1">
+<!ENTITY version    "2015.10.05">
+<!ENTITY revision   "d97d5f1">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
 <!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
@@ -16,6 +16,9 @@
 ##&name;
 
 ###&version;
+- Implement missing parts of the mentioned policy and update TvHeadend to version 4.0.6
+
+###2015.08.24;
 - Adapt to new security policy in unRAID v6.1 (please reboot after upgrade)
 
 ###2015.06.25;
