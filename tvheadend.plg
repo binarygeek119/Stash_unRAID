@@ -112,6 +112,8 @@ echo " Version: &version;"
 echo " TvHeadend Version: &revision;"
 echo "-----------------------------------------------------------"
 echo ""
+echo "NOTE: You need to start TvHeadend manually after every update!"
+echo ""
 </INLINE>
 </FILE>
 
