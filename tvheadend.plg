@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2017.04.29a">
+<!ENTITY version    "2017.04.29b">
 <!ENTITY revision   "4d4bf14">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
@@ -16,8 +16,9 @@
 ##&name;
 
 
-###2017.04.29a
+###2017.04.29b
 - Update to tvheadend version 4.2.1 STABLE finally :) :)
+- fixed dependencies
 
 ###2017.01.08
 - Update to tvheadend version 4.1-2409~g4db3eec, changed handling of wakeup script to make it less error prone
@@ -98,13 +99,16 @@ dependency files
 <URL>http://slackware.cs.utah.edu/pub/slackware/slackware64-14.1/slackware64/l/zlib-1.2.8-x86_64-1.txz</URL>
 </FILE>
 <FILE Name="&path;/dependencies/uriparser-0.7.5-x86_64-1PTr.txz" Run="upgradepkg --install-new">
-<URL>https://dl.dropboxusercontent.com/u/17326625/uriparser-0.7.5-x86_64-1PTr.txz</URL>
+<URL>https://www.dropbox.com/s/teeheusewya918o/uriparser-0.7.5-x86_64-1PTr.txz?dl=1</URL>
 </FILE>
 <FILE Name="&path;/dependencies/libiconv-1.13.1-x86_64-2_PTr.txz" Run="upgradepkg --install-new">
-<URL>https://dl.dropboxusercontent.com/u/17326625/libiconv-1.13.1-x86_64-2_PTr.txz</URL>
+<URL>https://www.dropbox.com/s/gptlplas2w5qyem/libiconv-1.13.1-x86_64-2_PTr.txz?dl=1</URL>
 </FILE>
 <FILE Name="&path;/dependencies/libdvbcsa1-1.1.0.tgz" Run="upgradepkg --install-new">
-<URL>https://dl.dropboxusercontent.com/u/17326625/libdvbcsa1-1.1.0.tgz</URL>
+<URL>https://www.dropbox.com/s/undjlajk6u6h754/libdvbcsa1-1.1.0.tgz?dl=1</URL>
+</FILE>
+<FILE Name="&path;/dependencies/dvb-apps-100514-x86_64-1jsc.txz" Run="upgradepkg --install-new">
+<URL>http://slackware.schoepfer.info/14.1_64/slackware64/multimedia/dvb-apps-100514-x86_64-1jsc.txz</URL>
 </FILE>
 
 
