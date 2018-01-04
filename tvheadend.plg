@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2017.11.06">
-<!ENTITY revision   "0771e34">
+<!ENTITY version    "2018.01.04">
+<!ENTITY revision   "fdb342e">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
 <!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
@@ -15,6 +15,9 @@
 <CHANGES>
 ##&name;
 
+
+###2018.01.04
+- Update to tvheadend version 4.2.5-3
 
 ###2017.11.06
 - Update to tvheadend version 4.2.4-10
