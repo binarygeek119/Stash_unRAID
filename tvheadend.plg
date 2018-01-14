@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2018.01.04">
+<!ENTITY version    "2018.01.14">
 <!ENTITY revision   "fdb342e">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
@@ -15,6 +15,9 @@
 <CHANGES>
 ##&name;
 
+
+###2018.01.14
+- add libssl-1.1.0g as required
 
 ###2018.01.04
 - Update to tvheadend version 4.2.5-3
@@ -116,10 +119,12 @@ dependency files
 <FILE Name="&path;/dependencies/libdvbcsa1-1.1.0.tgz" Run="upgradepkg --install-new">
 <URL>https://www.dropbox.com/s/undjlajk6u6h754/libdvbcsa1-1.1.0.tgz?dl=1</URL>
 </FILE>
+<FILE Name="&path;/dependencies/libssl-1.1.0g.txz" Run="upgradepkg --install-new">
+<URL>https://www.dropbox.com/s/gci9ul0e3y0rumy/libssl-1.1.0g.txz?dl=1</URL>
+</FILE>
 <FILE Name="&path;/dependencies/dvb-apps-100514-x86_64-1jsc.txz" Run="upgradepkg --install-new">
 <URL>http://slackware.schoepfer.info/14.1_64/slackware64/multimedia/dvb-apps-100514-x86_64-1jsc.txz</URL>
 </FILE>
-
 
 
 <!--
