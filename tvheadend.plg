@@ -3,8 +3,8 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2018.04.09">
-<!ENTITY revision   "c2a6b61">
+<!ENTITY version    "2018.12.13">
+<!ENTITY revision   "0678cb1">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
 <!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
@@ -15,6 +15,9 @@
 <CHANGES>
 ##&name;
 
+
+###2018.12.13
+- Update to tvheadend version 4.2.7 Remove conflicting dependency to libssl (included in unRaid)
 
 ###2018.04.09
 - Update to tvheadend version 4.2.6
