@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "tvheadend">
 <!ENTITY author     "Mettbrot">
-<!ENTITY version    "2019.02.27">
+<!ENTITY version    "2019.08.17a">
 <!ENTITY revision   "f8caa16">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
@@ -15,6 +15,9 @@
 <CHANGES>
 ##&name;
 
+
+###2019.08.17a
+- Update package to remove warnings on plugin page
 
 ###2019.02.27
 - Update to tvheadend version 4.2.8
