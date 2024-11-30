@@ -69,7 +69,7 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " Plugin &name; is installed."
 echo " Version: &version;"
-echo " Stash Version: &revision;"
+echo " Stash Version: &version;"
 echo "-----------------------------------------------------------"
 echo ""
 echo "NOTE: You need to start Stash manually after every update!"
@@ -91,7 +91,7 @@ rm -rf /boot/config/plugins/&name;
 # Uninstall the 'source' package
 removepkg &name;-&version;
 # Uninstall the 'stash' package
-removepkg pkg-&name;-&revision;;
+removepkg pkg-&name;-&version;;
 </INLINE>
 </FILE>
 
