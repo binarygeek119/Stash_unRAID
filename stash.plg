@@ -3,7 +3,7 @@
 <!DOCTYPE PLUGIN [
 <!ENTITY name       "stash">
 <!ENTITY author     "binarygeek119">
-<!ENTITY version    "v0.27.2">
+<!ENTITY version    "f8caa16">
 <!ENTITY revision   "f8caa16">
 <!ENTITY pluginURL  "https://github.com/binarygeek119/Stash_unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
