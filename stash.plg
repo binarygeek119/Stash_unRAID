@@ -1,7 +1,7 @@
 <?xml version='1.0' standalone='yes'?>
 
 <!DOCTYPE PLUGIN [
-<!ENTITY name       "StashApp">
+<!ENTITY name       "stash">
 <!ENTITY author     "binarygeek119">
 <!ENTITY version    "v0.27.2">
 <!ENTITY revision   "f8caa16">
