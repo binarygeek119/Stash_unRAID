@@ -49,25 +49,11 @@ The 'source' file.
 <!--
 dependency files
 -->
-<FILE Name="&path;/dependencies/zlib-1.2.8-x86_64-1.txz" Run="upgradepkg --install-new">
-<URL>http://slackware.cs.utah.edu/pub/slackware/slackware64-14.1/slackware64/l/zlib-1.2.8-x86_64-1.txz</URL>
-</FILE>
-<FILE Name="&path;/dependencies/uriparser-0.7.5-x86_64-1PTr.txz" Run="upgradepkg --install-new">
-<URL>https://www.dropbox.com/s/teeheusewya918o/uriparser-0.7.5-x86_64-1PTr.txz?dl=1</URL>
-</FILE>
-<FILE Name="&path;/dependencies/libiconv-1.13.1-x86_64-2_PTr.txz" Run="upgradepkg --install-new">
-<URL>https://www.dropbox.com/s/gptlplas2w5qyem/libiconv-1.13.1-x86_64-2_PTr.txz?dl=1</URL>
-</FILE>
-<FILE Name="&path;/dependencies/libdvbcsa1-1.1.0.tgz" Run="upgradepkg --install-new">
-<URL>https://www.dropbox.com/s/undjlajk6u6h754/libdvbcsa1-1.1.0.tgz?dl=1</URL>
-</FILE>
-<FILE Name="&path;/dependencies/dvb-apps-100514-x86_64-1jsc.txz" Run="upgradepkg --install-new">
-<URL>http://slackware.schoepfer.info/14.1_64/slackware64/multimedia/dvb-apps-100514-x86_64-1jsc.txz</URL>
-</FILE>
+
 
 
 <!--
-tvheadend package
+stash package
 -->
 <FILE Name="&path;/pkg-&name;-&revision;.tgz" Run="upgradepkg --install-new">
 <URL>&repository;pkg-&name;-&revision;.tgz</URL>
@@ -84,10 +70,10 @@ echo ""
 echo "-----------------------------------------------------------"
 echo " Plugin &name; is installed."
 echo " Version: &version;"
-echo " TvHeadend Version: &revision;"
+echo " Stash Version: &revision;"
 echo "-----------------------------------------------------------"
 echo ""
-echo "NOTE: You need to start TvHeadend manually after every update!"
+echo "NOTE: You need to start Stash manually after every update!"
 echo ""
 </INLINE>
 </FILE>
@@ -98,14 +84,14 @@ The 'remove' script.
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 # Stop service
-/usr/local/emhttp/plugins/&name;/scripts/rc.tvheadend stop
+/usr/local/emhttp/plugins/&name;/scripts/rc.stash stop
 
 # Remove plugin related files
 rm -rf /boot/config/plugins/&name;
 
 # Uninstall the 'source' package
 removepkg &name;-&version;
-# Uninstall the 'tvheadend' package
+# Uninstall the 'stash' package
 removepkg pkg-&name;-&revision;;
 </INLINE>
 </FILE>
