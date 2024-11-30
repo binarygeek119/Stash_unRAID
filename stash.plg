@@ -33,7 +33,7 @@ The 'pre-install' script.
 # Remove old 'source' files
 rm -f $(ls &path;/&name;*.txz 2>/dev/null|grep -v '&version;')
 # Remove old 'package' files
-rm -f $(ls &path;/pkg-&name;*.tgz 2>/dev/null|grep -v '&revision;')
+rm -f $(ls &path;/pkg-&name;*.tgz 2>/dev/null|grep -v '&version;')
 # Remove old dependencies ???
 </INLINE>
 </FILE>
