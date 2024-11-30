@@ -41,8 +41,8 @@ rm -f $(ls &path;/pkg-&name;*.tgz 2>/dev/null|grep -v '&version;')
 <!--
 The 'source' file.
 -->
-<FILE Name="&path;/&name;-&version;.txz" Run="upgradepkg --install-new">
-<URL>&repository;&name;-&version;.txz</URL>
+<FILE Name="&path;/&name;-&version;.tgz" Run="upgradepkg --install-new">
+<URL>&repository;&name;-&version;.tgz</URL>
 </FILE>
 
 <!--
