@@ -5,9 +5,9 @@
 <!ENTITY author     "binarygeek119">
 <!ENTITY version    "v0.27.2">
 <!ENTITY revision   "f8caa16">
-<!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
+<!ENTITY pluginURL  "https://github.com/binarygeek119/Stash_unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
-<!ENTITY repository "https://github.com/Mettbrot/unRAID/raw/master/archive/">
+<!ENTITY repository "https://github.com/binarygeek119/Stash_unRAID/raw/master/archive/">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" pluginURL="&pluginURL;">
@@ -16,80 +16,10 @@
 ##&name;
 
 
-###2019.08.17a
-- Update package to remove warnings on plugin page
 
-###2019.02.27
-- Update to tvheadend version 4.2.8
 
-###2018.12.13
-- Update to tvheadend version 4.2.7 Remove conflicting dependency to libssl (included in unRaid)
-
-###2018.04.09
-- Update to tvheadend version 4.2.6
-
-###2018.01.14
-- add libssl-1.1.0g as required
-
-###2018.01.04
-- Update to tvheadend version 4.2.5-3
-
-###2017.11.06
-- Update to tvheadend version 4.2.4-10
-
-###2017.08.02
-- Update to tvheadend version 4.2.3
-
-###2017.04.29b
-- Update to tvheadend version 4.2.1 STABLE finally :) :)
-- fixed dependencies
-
-###2017.01.08
-- Update to tvheadend version 4.1-2409~g4db3eec, changed handling of wakeup script to make it less error prone
-
-###2016.11.05
-- Major update to tvheadend version 4.1~0736ebc PLEASE BACKUP YOUR DATABASE BEFORE INSTALLING
-
-###2016.03.23
-- Update TvHeadend to version 4.0.9
-
-###2016.01.15
-- Update TvHeadend to version 4.0.8 (self compiled, please report problems!)
-- fix loading of settings
-- add setting for shutdown script: http://www.tvheadend.org/projects/tvheadend/wiki/Wakeup
-
-###2015.10.29
-- Update TvHeadend to version 4.0.7
-
-###2015.10.05;
-- Implement missing parts of the mentioned policy and update TvHeadend to version 4.0.6
-
-###2015.08.24;
-- Adapt to new security policy in unRAID v6.1 (please reboot after upgrade)
-
-###2015.06.25;
-- updated tvheadend to the latest version in stable branch (4.0.5)
-
-###2015.06.09;
-- updated tvheadend to the latest version in stable branch (4.0.4)
-
-###2015.06.05;
-- fixup dependencies
-
-###2015.06.04;
-- first version with dynamix plugin support
-
-###2015.03.01
-- 2012-06-04-ww		- first release
-- 2012-06-11-ww		- tons of improvements + cool web layout
-- 2012-06-12-ww		- added START/STOP button + some improvements in start/stop functions
-- 2012-06-19-ww		- added XMLTV feature + HDHomeRun tuners support + new version of Tvheadend
-- 2013-08-16-Mettbrot	- removed XMLTV and BZ-file download for simplicity
-- 2013-12-24-Mettbrot	- Happy Holidays! upgraded tvheadend to a newer version - please back up your configuration!
-- 2014-07-09-Mettbrot	- Updated for Zlib support
-- 2014-07-09-Mettbrot	- First unRaid6.0 Edition. Installs 64bit binary nothing else.
-- 2014-12-03-Mettbrot - Adapted to new plugin system (dynamix)
-- 2015-03-01-Mettbrot - Added a dependency
+###v0.27.2
+- 2024-11-30-ww		- first release
 
 </CHANGES>
 
@@ -99,7 +29,7 @@ The 'pre-install' script.
 <FILE Run="/bin/bash">
 <INLINE>
 # Stop service
-/usr/local/emhttp/plugins/&name;/scripts/rc.tvheadend stop 2>/dev/null
+/usr/local/emhttp/plugins/&name;/scripts/rc.stash stop 2>/dev/null
 
 # Remove old 'source' files
 rm -f $(ls &path;/&name;*.txz 2>/dev/null|grep -v '&version;')
