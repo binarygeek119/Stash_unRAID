@@ -1,9 +1,9 @@
 <?xml version='1.0' standalone='yes'?>
 
 <!DOCTYPE PLUGIN [
-<!ENTITY name       "tvheadend">
-<!ENTITY author     "Mettbrot">
-<!ENTITY version    "2019.08.17a">
+<!ENTITY name       "StashApp">
+<!ENTITY author     "binarygeek119">
+<!ENTITY version    "v0.27.2">
 <!ENTITY revision   "f8caa16">
 <!ENTITY pluginURL  "https://github.com/Mettbrot/unRAID/raw/master/&name;.plg">
 <!ENTITY path       "/boot/config/plugins/&name;">
